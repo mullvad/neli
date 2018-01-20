@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["GenlHdr","Struct representing generic netlink header and payload"]]});

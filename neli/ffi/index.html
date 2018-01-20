@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ffi` mod in crate `neli`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ffi">
+
+    <title>neli::ffi - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Module ffi</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#enums">Enums</a></li><li><a href="#statics">Statics</a></li><li><a href="#functions">Functions</a></li></ul></div><p class='location'><a href='../index.html'>neli</a></p><script>window.sidebarCurrent = {name: 'ffi', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>neli</a>::<wbr><a class="mod" href=''>ffi</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/neli/ffi.rs.html#1-242' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>C constants defined as types</p>
+</div><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CtrlAttr.html"
+                                  title='enum neli::ffi::CtrlAttr'>CtrlAttr</a></td>
+                           <td class='docblock-short'>
+                                <p>Enum representing C constants for netlink packets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CtrlAttrMcastGrp.html"
+                                  title='enum neli::ffi::CtrlAttrMcastGrp'>CtrlAttrMcastGrp</a></td>
+                           <td class='docblock-short'>
+                                <p>Enum representing C constants for netlink packets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CtrlCmd.html"
+                                  title='enum neli::ffi::CtrlCmd'>CtrlCmd</a></td>
+                           <td class='docblock-short'>
+                                <p>Enum representing C constants for netlink packets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GenlId.html"
+                                  title='enum neli::ffi::GenlId'>GenlId</a></td>
+                           <td class='docblock-short'>
+                                <p>Enum representing C constants for netlink packets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.NlFamily.html"
+                                  title='enum neli::ffi::NlFamily'>NlFamily</a></td>
+                           <td class='docblock-short'>
+                                <p>Enum representing C constants for netlink packets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.NlFlags.html"
+                                  title='enum neli::ffi::NlFlags'>NlFlags</a></td>
+                           <td class='docblock-short'>
+                                <p>Enum representing C constants for netlink packets</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.Nlmsg.html"
+                                  title='enum neli::ffi::Nlmsg'>Nlmsg</a></td>
+                           <td class='docblock-short'>
+                                <p>Enum representing C constants for netlink packets</p>
+
+                           </td>
+                       </tr></table><h2 id='statics' class='section-header'><a href="#statics">Statics</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_attr_family_id.html"
+                                  title='static neli::ffi::ctrl_attr_family_id'>ctrl_attr_family_id</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_attr_family_name.html"
+                                  title='static neli::ffi::ctrl_attr_family_name'>ctrl_attr_family_name</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_attr_hdrsize.html"
+                                  title='static neli::ffi::ctrl_attr_hdrsize'>ctrl_attr_hdrsize</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_attr_maxattr.html"
+                                  title='static neli::ffi::ctrl_attr_maxattr'>ctrl_attr_maxattr</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_attr_mcast_groups.html"
+                                  title='static neli::ffi::ctrl_attr_mcast_groups'>ctrl_attr_mcast_groups</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_attr_mcast_grp_id.html"
+                                  title='static neli::ffi::ctrl_attr_mcast_grp_id'>ctrl_attr_mcast_grp_id</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_attr_mcast_grp_name.html"
+                                  title='static neli::ffi::ctrl_attr_mcast_grp_name'>ctrl_attr_mcast_grp_name</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_attr_mcast_grp_unspec.html"
+                                  title='static neli::ffi::ctrl_attr_mcast_grp_unspec'>ctrl_attr_mcast_grp_unspec</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_attr_ops.html"
+                                  title='static neli::ffi::ctrl_attr_ops'>ctrl_attr_ops</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_attr_unspec.html"
+                                  title='static neli::ffi::ctrl_attr_unspec'>ctrl_attr_unspec</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_attr_version.html"
+                                  title='static neli::ffi::ctrl_attr_version'>ctrl_attr_version</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_cmd_delfamily.html"
+                                  title='static neli::ffi::ctrl_cmd_delfamily'>ctrl_cmd_delfamily</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_cmd_delmcast_grp.html"
+                                  title='static neli::ffi::ctrl_cmd_delmcast_grp'>ctrl_cmd_delmcast_grp</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_cmd_delops.html"
+                                  title='static neli::ffi::ctrl_cmd_delops'>ctrl_cmd_delops</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_cmd_getfamily.html"
+                                  title='static neli::ffi::ctrl_cmd_getfamily'>ctrl_cmd_getfamily</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_cmd_getmcast_grp.html"
+                                  title='static neli::ffi::ctrl_cmd_getmcast_grp'>ctrl_cmd_getmcast_grp</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_cmd_getops.html"
+                                  title='static neli::ffi::ctrl_cmd_getops'>ctrl_cmd_getops</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_cmd_newfamily.html"
+                                  title='static neli::ffi::ctrl_cmd_newfamily'>ctrl_cmd_newfamily</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_cmd_newmcast_grp.html"
+                                  title='static neli::ffi::ctrl_cmd_newmcast_grp'>ctrl_cmd_newmcast_grp</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_cmd_newops.html"
+                                  title='static neli::ffi::ctrl_cmd_newops'>ctrl_cmd_newops</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.ctrl_cmd_unspec.html"
+                                  title='static neli::ffi::ctrl_cmd_unspec'>ctrl_cmd_unspec</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.genl_id_ctrl.html"
+                                  title='static neli::ffi::genl_id_ctrl'>genl_id_ctrl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.genl_id_generate.html"
+                                  title='static neli::ffi::genl_id_generate'>genl_id_generate</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.genl_id_pmcraid.html"
+                                  title='static neli::ffi::genl_id_pmcraid'>genl_id_pmcraid</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.genl_id_vfs_dquot.html"
+                                  title='static neli::ffi::genl_id_vfs_dquot'>genl_id_vfs_dquot</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_audit.html"
+                                  title='static neli::ffi::netlink_audit'>netlink_audit</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_connector.html"
+                                  title='static neli::ffi::netlink_connector'>netlink_connector</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_crypto.html"
+                                  title='static neli::ffi::netlink_crypto'>netlink_crypto</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_dnrtmsg.html"
+                                  title='static neli::ffi::netlink_dnrtmsg'>netlink_dnrtmsg</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_ecryptfs.html"
+                                  title='static neli::ffi::netlink_ecryptfs'>netlink_ecryptfs</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_fib_lookup.html"
+                                  title='static neli::ffi::netlink_fib_lookup'>netlink_fib_lookup</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_firewall.html"
+                                  title='static neli::ffi::netlink_firewall'>netlink_firewall</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_generic.html"
+                                  title='static neli::ffi::netlink_generic'>netlink_generic</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_ip6_fw.html"
+                                  title='static neli::ffi::netlink_ip6_fw'>netlink_ip6_fw</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_iscsi.html"
+                                  title='static neli::ffi::netlink_iscsi'>netlink_iscsi</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_kobject_uevent.html"
+                                  title='static neli::ffi::netlink_kobject_uevent'>netlink_kobject_uevent</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_netfilter.html"
+                                  title='static neli::ffi::netlink_netfilter'>netlink_netfilter</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_nflog.html"
+                                  title='static neli::ffi::netlink_nflog'>netlink_nflog</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_rdma.html"
+                                  title='static neli::ffi::netlink_rdma'>netlink_rdma</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_route.html"
+                                  title='static neli::ffi::netlink_route'>netlink_route</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_scsitransport.html"
+                                  title='static neli::ffi::netlink_scsitransport'>netlink_scsitransport</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_selinux.html"
+                                  title='static neli::ffi::netlink_selinux'>netlink_selinux</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_sock_diag.html"
+                                  title='static neli::ffi::netlink_sock_diag'>netlink_sock_diag</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_unused.html"
+                                  title='static neli::ffi::netlink_unused'>netlink_unused</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_usersock.html"
+                                  title='static neli::ffi::netlink_usersock'>netlink_usersock</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.netlink_xfrm.html"
+                                  title='static neli::ffi::netlink_xfrm'>netlink_xfrm</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nla_alignto.html"
+                                  title='static neli::ffi::nla_alignto'>nla_alignto</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlm_f_ack.html"
+                                  title='static neli::ffi::nlm_f_ack'>nlm_f_ack</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlm_f_append.html"
+                                  title='static neli::ffi::nlm_f_append'>nlm_f_append</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlm_f_atomic.html"
+                                  title='static neli::ffi::nlm_f_atomic'>nlm_f_atomic</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlm_f_create.html"
+                                  title='static neli::ffi::nlm_f_create'>nlm_f_create</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlm_f_dump.html"
+                                  title='static neli::ffi::nlm_f_dump'>nlm_f_dump</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlm_f_dump_filtered.html"
+                                  title='static neli::ffi::nlm_f_dump_filtered'>nlm_f_dump_filtered</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlm_f_dump_intr.html"
+                                  title='static neli::ffi::nlm_f_dump_intr'>nlm_f_dump_intr</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlm_f_echo.html"
+                                  title='static neli::ffi::nlm_f_echo'>nlm_f_echo</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlm_f_excl.html"
+                                  title='static neli::ffi::nlm_f_excl'>nlm_f_excl</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlm_f_match.html"
+                                  title='static neli::ffi::nlm_f_match'>nlm_f_match</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlm_f_multi.html"
+                                  title='static neli::ffi::nlm_f_multi'>nlm_f_multi</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlm_f_replace.html"
+                                  title='static neli::ffi::nlm_f_replace'>nlm_f_replace</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlm_f_request.html"
+                                  title='static neli::ffi::nlm_f_request'>nlm_f_request</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlm_f_root.html"
+                                  title='static neli::ffi::nlm_f_root'>nlm_f_root</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlmsg_done.html"
+                                  title='static neli::ffi::nlmsg_done'>nlmsg_done</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlmsg_error.html"
+                                  title='static neli::ffi::nlmsg_error'>nlmsg_error</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlmsg_noop.html"
+                                  title='static neli::ffi::nlmsg_noop'>nlmsg_noop</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.nlmsg_overrun.html"
+                                  title='static neli::ffi::nlmsg_overrun'>nlmsg_overrun</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.alignto.html"
+                                  title='fn neli::ffi::alignto'>alignto</a></td>
+                           <td class='docblock-short'>
+                                <p>Reimplementation of alignto macro in C</p>
+
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "neli";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

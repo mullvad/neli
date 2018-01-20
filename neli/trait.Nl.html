@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Nl` trait in crate `neli`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Nl">
+
+    <title>neli::Nl - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc trait">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Trait Nl</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#required-methods">Required Methods</a><div class="sidebar-links"><a href="#tymethod.serialize">serialize</a><a href="#tymethod.deserialize">deserialize</a><a href="#tymethod.size">size</a></div><a class="sidebar-title" href="#provided-methods">Provided Methods</a><div class="sidebar-links"><a href="#method.asize">asize</a></div><a class="sidebar-title" href="#foreign-impls">Implementations on Foreign Types</a><div class="sidebar-links"><a href="#impl-Nl">u8</a><a href="#impl-Nl">u16</a><a href="#impl-Nl">u32</a><a href="#impl-Nl">Vec&lt;u8&gt;</a></div><a class="sidebar-title" href="#implementors">Implementors</a></div><p class='location'><a href='index.html'>neli</a></p><script>window.sidebarCurrent = {name: 'Nl', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Trait <a href='index.html'>neli</a>::<wbr><a class="trait" href=''>Nl</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/neli/lib.rs.html#92-103' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait Nl: <a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a> + <a class="trait" href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html" title="trait core::default::Default">Default</a> {
+    fn <a href='#tymethod.serialize' class='fnname'>serialize</a>(&amp;mut self, _: &amp;mut <a class="struct" href="../neli/struct.NlSerState.html" title="struct neli::NlSerState">NlSerState</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="../neli/err/struct.SerError.html" title="struct neli::err::SerError">SerError</a>&gt;;
+<div class='item-spacer'></div>    fn <a href='#tymethod.deserialize' class='fnname'>deserialize</a>(state: &amp;mut <a class="struct" href="../neli/struct.NlDeState.html" title="struct neli::NlDeState">NlDeState</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self, <a class="struct" href="../neli/err/struct.DeError.html" title="struct neli::err::DeError">DeError</a>&gt;;
+<div class='item-spacer'></div>    fn <a href='#tymethod.size' class='fnname'>size</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a>;
+
+    fn <a href='#method.asize' class='fnname'>asize</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a> { ... }
+}</pre><div class='docblock'><p>Trait defining basic actions required for netlink communication</p>
+</div>
+            <h2 id='required-methods' class='small-section-header'>
+              Required Methods<a href='#required-methods' class='anchor'></a>
+            </h2>
+            <div class='methods'>
+        <h3 id='tymethod.serialize' class='method'><span id='serialize.v' class='invisible'><code>fn <a href='#tymethod.serialize' class='fnname'>serialize</a>(&amp;mut self, _: &amp;mut <a class="struct" href="../neli/struct.NlSerState.html" title="struct neli::NlSerState">NlSerState</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="../neli/err/struct.SerError.html" title="struct neli::err::SerError">SerError</a>&gt;</code></span></h3><div class='docblock'><p>Serialization method</p>
+</div><h3 id='tymethod.deserialize' class='method'><span id='deserialize.v' class='invisible'><code>fn <a href='#tymethod.deserialize' class='fnname'>deserialize</a>(state: &amp;mut <a class="struct" href="../neli/struct.NlDeState.html" title="struct neli::NlDeState">NlDeState</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self, <a class="struct" href="../neli/err/struct.DeError.html" title="struct neli::err::DeError">DeError</a>&gt;</code></span></h3><div class='docblock'><p>Deserialization method</p>
+</div><h3 id='tymethod.size' class='method'><span id='size.v' class='invisible'><code>fn <a href='#tymethod.size' class='fnname'>size</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span></h3><div class='docblock'><p>The size of the binary representation of a struct - not aligned to word size</p>
+</div></div>
+            <h2 id='provided-methods' class='small-section-header'>
+              Provided Methods<a href='#provided-methods' class='anchor'></a>
+            </h2>
+            <div class='methods'>
+        <h3 id='method.asize' class='method'><span id='asize.v' class='invisible'><code>fn <a href='#method.asize' class='fnname'>asize</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span></h3><div class='docblock'><p>The size of the binary representation of a struct - aligned to word size</p>
+</div></div>
+                <h2 id='foreign-impls' class='small-section-header'>
+                  Implementations on Foreign Types<a href='#foreign-impls' class='anchor'></a>
+                </h2>
+            <h3 id='impl-Nl' class='impl'><span class='in-band'><code>impl <a class="trait" href="../neli/trait.Nl.html" title="trait neli::Nl">Nl</a> for <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code><a href='#impl-Nl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#105-118' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.serialize' class="method"><span id='serialize.v-1' class='invisible'><code>fn <a href='#method.serialize' class='fnname'>serialize</a>(&amp;mut self, state: &amp;mut <a class="struct" href="../neli/struct.NlSerState.html" title="struct neli::NlSerState">NlSerState</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="../neli/err/struct.SerError.html" title="struct neli::err::SerError">SerError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#106-109' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.deserialize' class="method"><span id='deserialize.v-1' class='invisible'><code>fn <a href='#method.deserialize' class='fnname'>deserialize</a>(state: &amp;mut <a class="struct" href="../neli/struct.NlDeState.html" title="struct neli::NlDeState">NlDeState</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self, <a class="struct" href="../neli/err/struct.DeError.html" title="struct neli::err::DeError">DeError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#111-113' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.size' class="method"><span id='size.v-1' class='invisible'><code>fn <a href='#method.size' class='fnname'>size</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#115-117' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.asize-1' class="method"><span id='asize.v-1' class='invisible'><code>fn <a href='../neli/trait.Nl.html#method.asize' class='fnname'>asize</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#100-102' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-Nl-1' class='impl'><span class='in-band'><code>impl <a class="trait" href="../neli/trait.Nl.html" title="trait neli::Nl">Nl</a> for <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a></code><a href='#impl-Nl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#120-133' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.serialize-1' class="method"><span id='serialize.v-2' class='invisible'><code>fn <a href='#method.serialize' class='fnname'>serialize</a>(&amp;mut self, state: &amp;mut <a class="struct" href="../neli/struct.NlSerState.html" title="struct neli::NlSerState">NlSerState</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="../neli/err/struct.SerError.html" title="struct neli::err::SerError">SerError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#121-124' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.deserialize-1' class="method"><span id='deserialize.v-2' class='invisible'><code>fn <a href='#method.deserialize' class='fnname'>deserialize</a>(state: &amp;mut <a class="struct" href="../neli/struct.NlDeState.html" title="struct neli::NlDeState">NlDeState</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self, <a class="struct" href="../neli/err/struct.DeError.html" title="struct neli::err::DeError">DeError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#126-128' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.size-1' class="method"><span id='size.v-2' class='invisible'><code>fn <a href='#method.size' class='fnname'>size</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#130-132' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.asize-2' class="method"><span id='asize.v-2' class='invisible'><code>fn <a href='../neli/trait.Nl.html#method.asize' class='fnname'>asize</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#100-102' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-Nl-2' class='impl'><span class='in-band'><code>impl <a class="trait" href="../neli/trait.Nl.html" title="trait neli::Nl">Nl</a> for <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a></code><a href='#impl-Nl-2' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#135-148' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.serialize-2' class="method"><span id='serialize.v-3' class='invisible'><code>fn <a href='#method.serialize' class='fnname'>serialize</a>(&amp;mut self, state: &amp;mut <a class="struct" href="../neli/struct.NlSerState.html" title="struct neli::NlSerState">NlSerState</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="../neli/err/struct.SerError.html" title="struct neli::err::SerError">SerError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#136-139' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.deserialize-2' class="method"><span id='deserialize.v-3' class='invisible'><code>fn <a href='#method.deserialize' class='fnname'>deserialize</a>(state: &amp;mut <a class="struct" href="../neli/struct.NlDeState.html" title="struct neli::NlDeState">NlDeState</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self, <a class="struct" href="../neli/err/struct.DeError.html" title="struct neli::err::DeError">DeError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#141-143' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.size-2' class="method"><span id='size.v-3' class='invisible'><code>fn <a href='#method.size' class='fnname'>size</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#145-147' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.asize-3' class="method"><span id='asize.v-3' class='invisible'><code>fn <a href='../neli/trait.Nl.html#method.asize' class='fnname'>asize</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#100-102' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-Nl-3' class='impl'><span class='in-band'><code>impl <a class="trait" href="../neli/trait.Nl.html" title="trait neli::Nl">Nl</a> for <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>&gt;</code><a href='#impl-Nl-3' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#150-172' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.serialize-3' class="method"><span id='serialize.v-4' class='invisible'><code>fn <a href='#method.serialize' class='fnname'>serialize</a>(&amp;mut self, state: &amp;mut <a class="struct" href="../neli/struct.NlSerState.html" title="struct neli::NlSerState">NlSerState</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.unit.html">()</a>, <a class="struct" href="../neli/err/struct.SerError.html" title="struct neli::err::SerError">SerError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#151-159' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.deserialize-3' class="method"><span id='deserialize.v-4' class='invisible'><code>fn <a href='#method.deserialize' class='fnname'>deserialize</a>(state: &amp;mut <a class="struct" href="../neli/struct.NlDeState.html" title="struct neli::NlDeState">NlDeState</a>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;Self, <a class="struct" href="../neli/err/struct.DeError.html" title="struct neli::err::DeError">DeError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#161-167' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.size-3' class="method"><span id='size.v-4' class='invisible'><code>fn <a href='#method.size' class='fnname'>size</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#169-171' title='goto source code'>[src]</a></span></h4>
+<h4 id='method.asize-4' class="method"><span id='asize.v-4' class='invisible'><code>fn <a href='../neli/trait.Nl.html#method.asize' class='fnname'>asize</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.usize.html">usize</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/neli/lib.rs.html#100-102' title='goto source code'>[src]</a></span></h4>
+</div></span>
+        <h2 id='implementors' class='small-section-header'>
+          Implementors<a href='#implementors' class='anchor'></a>
+        </h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><div class='out-of-band'><a class='srclink' href='../src/neli/ffi.rs.html#51-66' title='goto source code'>[src]</a></div><code>impl Nl for <a class="enum" href="../neli/ffi/enum.NlFamily.html" title="enum neli::ffi::NlFamily">NlFamily</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/neli/ffi.rs.html#51-66' title='goto source code'>[src]</a></div><code>impl Nl for <a class="enum" href="../neli/ffi/enum.Nlmsg.html" title="enum neli::ffi::Nlmsg">Nlmsg</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/neli/ffi.rs.html#51-66' title='goto source code'>[src]</a></div><code>impl Nl for <a class="enum" href="../neli/ffi/enum.NlFlags.html" title="enum neli::ffi::NlFlags">NlFlags</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/neli/ffi.rs.html#51-66' title='goto source code'>[src]</a></div><code>impl Nl for <a class="enum" href="../neli/ffi/enum.GenlId.html" title="enum neli::ffi::GenlId">GenlId</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/neli/ffi.rs.html#51-66' title='goto source code'>[src]</a></div><code>impl Nl for <a class="enum" href="../neli/ffi/enum.CtrlCmd.html" title="enum neli::ffi::CtrlCmd">CtrlCmd</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/neli/ffi.rs.html#51-66' title='goto source code'>[src]</a></div><code>impl Nl for <a class="enum" href="../neli/ffi/enum.CtrlAttr.html" title="enum neli::ffi::CtrlAttr">CtrlAttr</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/neli/ffi.rs.html#51-66' title='goto source code'>[src]</a></div><code>impl Nl for <a class="enum" href="../neli/ffi/enum.CtrlAttrMcastGrp.html" title="enum neli::ffi::CtrlAttrMcastGrp">CtrlAttrMcastGrp</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/neli/nlhdr.rs.html#52-88' title='goto source code'>[src]</a></div><code>impl&lt;I:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html" title="trait core::default::Default">Default</a> + <a class="trait" href="../neli/trait.Nl.html" title="trait neli::Nl">Nl</a>, T:&nbsp;<a class="trait" href="../neli/trait.Nl.html" title="trait neli::Nl">Nl</a>&gt; Nl for <a class="struct" href="../neli/nlhdr/struct.NlHdr.html" title="struct neli::nlhdr::NlHdr">NlHdr</a>&lt;I, T&gt;</code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/neli/nlhdr.rs.html#149-170' title='goto source code'>[src]</a></div><code>impl&lt;T&gt; Nl for <a class="struct" href="../neli/nlhdr/struct.NlAttrHdr.html" title="struct neli::nlhdr::NlAttrHdr">NlAttrHdr</a>&lt;T&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html" title="trait core::default::Default">Default</a> + <a class="trait" href="../neli/trait.Nl.html" title="trait neli::Nl">Nl</a>,&nbsp;</span></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/neli/nlhdr.rs.html#265-277' title='goto source code'>[src]</a></div><code>impl Nl for <a class="struct" href="../neli/nlhdr/struct.NlEmpty.html" title="struct neli::nlhdr::NlEmpty">NlEmpty</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/neli/genlhdr.rs.html#50-72' title='goto source code'>[src]</a></div><code>impl Nl for <a class="struct" href="../neli/genlhdr/struct.GenlHdr.html" title="struct neli::genlhdr::GenlHdr">GenlHdr</a></code></li>
+</ul><script type="text/javascript" async
+                         src="../implementors/neli/trait.Nl.js">
+                 </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "neli";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

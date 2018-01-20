@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `AttrHandle` enum in crate `neli`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, AttrHandle">
+
+    <title>neli::nlhdr::AttrHandle - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc enum">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Enum AttrHandle</p><div class="sidebar-elems"><div class="block items"><a class="sidebar-title" href="#variants">Variants</a><div class="sidebar-links"><a href="#variant.Bin">Bin</a><a href="#variant.Parsed">Parsed</a></div><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.parse_nested_attributes">parse_nested_attributes</a><a href="#method.get_nested_attributes">get_nested_attributes</a><a href="#method.get_attribute">get_attribute</a><a href="#method.get_attribute_mut">get_attribute_mut</a><a href="#method.get_payload_as">get_payload_as</a></div></div><p class='location'><a href='../index.html'>neli</a>::<wbr><a href='index.html'>nlhdr</a></p><script>window.sidebarCurrent = {name: 'AttrHandle', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>neli</a>::<wbr><a href='index.html'>nlhdr</a>::<wbr><a class="enum" href=''>AttrHandle</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/neli/nlhdr.rs.html#173-178' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum AttrHandle&lt;P&gt; {
+    Bin(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>&gt;),
+    Parsed(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../neli/nlhdr/struct.NlAttrHdr.html" title="struct neli::nlhdr::NlAttrHdr">NlAttrHdr</a>&lt;P&gt;&gt;),
+}</pre><div class='docblock'><p>Handle returned by <code>GenlHdr</code> for traversing nested attribute structures</p>
+</div><h2 id='variants' class='variants small-section-header'>
+                   Variants<a href='#variants' class='anchor'></a></h2>
+<span id="variant.Bin" class="variant small-section-header"><a href="#variant.Bin" class="anchor field"></a><span id='Bin.v' class='invisible'><code>Bin(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>&gt;)</code></span></span><div class='docblock'><p>Binary internal representation of attributes</p>
+</div><span id="variant.Parsed" class="variant small-section-header"><a href="#variant.Parsed" class="anchor field"></a><span id='Parsed.v' class='invisible'><code>Parsed(<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../../neli/nlhdr/struct.NlAttrHdr.html" title="struct neli::nlhdr::NlAttrHdr">NlAttrHdr</a>&lt;P&gt;&gt;)</code></span></span><div class='docblock'><p>Rust representation of attributes</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;'a, P&gt; <a class="enum" href="../../neli/nlhdr/enum.AttrHandle.html" title="enum neli::nlhdr::AttrHandle">AttrHandle</a>&lt;P&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html" title="trait core::cmp::PartialEq">PartialEq</a> + <a class="trait" href="../../neli/trait.Nl.html" title="trait neli::Nl">Nl</a>,&nbsp;</span></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/neli/nlhdr.rs.html#180-253' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.parse_nested_attributes' class="method"><span id='parse_nested_attributes.v' class='invisible'><code>pub fn <a href='#method.parse_nested_attributes' class='fnname'>parse_nested_attributes</a>(&amp;mut self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;&amp;mut <a class="enum" href="../../neli/nlhdr/enum.AttrHandle.html" title="enum neli::nlhdr::AttrHandle">AttrHandle</a>&lt;P&gt;, <a class="struct" href="../../neli/err/struct.DeError.html" title="struct neli::err::DeError">DeError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/neli/nlhdr.rs.html#182-202' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Parse a binary payload into nested attributes</p>
+</div><h4 id='method.get_nested_attributes' class="method"><span id='get_nested_attributes.v' class='invisible'><code>pub fn <a href='#method.get_nested_attributes' class='fnname'>get_nested_attributes</a>&lt;S&gt;(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;mut self, <br>&nbsp;&nbsp;&nbsp;&nbsp;payload: P<br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="enum" href="../../neli/nlhdr/enum.AttrHandle.html" title="enum neli::nlhdr::AttrHandle">AttrHandle</a>&lt;S&gt;, <a class="struct" href="../../neli/err/struct.DeError.html" title="struct neli::err::DeError">DeError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/neli/nlhdr.rs.html#205-211' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Get the payload of an attribute as a handle for parsing nested attributes</p>
+</div><h4 id='method.get_attribute' class="method"><span id='get_attribute.v' class='invisible'><code>pub fn <a href='#method.get_attribute' class='fnname'>get_attribute</a>(&amp;'a self, p: P) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;'a <a class="struct" href="../../neli/nlhdr/struct.NlAttrHdr.html" title="struct neli::nlhdr::NlAttrHdr">NlAttrHdr</a>&lt;P&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/neli/nlhdr.rs.html#214-226' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Get nested attributes from a parsed handle</p>
+</div><h4 id='method.get_attribute_mut' class="method"><span id='get_attribute_mut.v' class='invisible'><code>pub fn <a href='#method.get_attribute_mut' class='fnname'>get_attribute_mut</a>(&amp;'a mut self, p: P) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;&amp;'a mut <a class="struct" href="../../neli/nlhdr/struct.NlAttrHdr.html" title="struct neli::nlhdr::NlAttrHdr">NlAttrHdr</a>&lt;P&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/neli/nlhdr.rs.html#229-241' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Mutably get nested attributes from a parsed handle</p>
+</div><h4 id='method.get_payload_as' class="method"><span id='get_payload_as.v' class='invisible'><code>pub fn <a href='#method.get_payload_as' class='fnname'>get_payload_as</a>&lt;T&gt;(&amp;mut self, attr: P) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;T, <a class="struct" href="../../neli/err/struct.DeError.html" title="struct neli::err::DeError">DeError</a>&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="../../neli/trait.Nl.html" title="trait neli::Nl">Nl</a>,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/neli/nlhdr.rs.html#244-252' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Parse binary payload as a type that implements <code>Nl</code></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "neli";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `neli` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, neli">
+
+    <title>neli - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        <div class="sidebar-menu">&#9776;</div>
+        
+        <p class='location'>Crate neli</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#modules">Modules</a></li><li><a href="#structs">Structs</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'neli', ty: 'mod', relpath: '../'};</script></div>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>neli</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/neli/lib.rs.html#1-249' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><h1 id="type-safety-for-the-weary-netlink-user" class="section-header"><a href="#type-safety-for-the-weary-netlink-user">Type safety for the weary netlink user</a></h1><h2 id="rationale" class="section-header"><a href="#rationale">Rationale</a></h2>
+<p>The <code>libc</code> crate currently provides an interface for sockets but
+the constants to configure the socket to do anything useful in netlink
+are not included in the crate because they live in <code>/usr/include/linux/netlink.h</code> and friends.
+As a result, doing anything with netlink in Rust is currently a bit of a headache.</p>
+<p>This crate aims to define the necessary constants and wrap them in types to both take
+advantage of the Rust type system and also avoid the need to pop open <code>.h</code> files
+to find the information necessary to construct netlink messages.</p>
+<h2 id="notes" class="section-header"><a href="#notes">Notes</a></h2>
+<p>This crate is currently under heavy development.</p>
+<p>The <code>cc</code> crate is a build dependency to provide as much of a natively cross distribution
+approach as possible regarding <code>#define</code>s in C. It is used to compile a C file that includes
+the appropriate headers and exports them to the corresponding <code>stdint.h</code> types in C.</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="err/index.html"
+                                  title='mod neli::err'>err</a></td>
+                           <td class='docblock-short'>
+                                <p>Error module</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="ffi/index.html"
+                                  title='mod neli::ffi'>ffi</a></td>
+                           <td class='docblock-short'>
+                                <p>C constants defined as types</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="genlhdr/index.html"
+                                  title='mod neli::genlhdr'>genlhdr</a></td>
+                           <td class='docblock-short'>
+                                <p>Genetlink (generic netlink) header and attribute helpers</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="nlhdr/index.html"
+                                  title='mod neli::nlhdr'>nlhdr</a></td>
+                           <td class='docblock-short'>
+                                <p>Top-level netlink header</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="mod" href="socket/index.html"
+                                  title='mod neli::socket'>socket</a></td>
+                           <td class='docblock-short'>
+                                <p>Wrapper for <code>libc</code> sockets</p>
+
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NlDeState.html"
+                                  title='struct neli::NlDeState'>NlDeState</a></td>
+                           <td class='docblock-short'>
+                                <p>Struct representing the necessary state to deserialize an object</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NlSerState.html"
+                                  title='struct neli::NlSerState'>NlSerState</a></td>
+                           <td class='docblock-short'>
+                                <p>Struct representing the necessary state to serialize an object</p>
+
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Nl.html"
+                                  title='trait neli::Nl'>Nl</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait defining basic actions required for netlink communication</p>
+
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "neli";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["DeError","Deserialization error"],["NlError","Netlink protocol error"],["SerError","Serialization error"]]});

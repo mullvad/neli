@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["NlSocket","Handle for the socket file descriptor"]]});
